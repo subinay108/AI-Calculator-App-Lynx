@@ -1,27 +1,17 @@
-:root {
-  background-color: #000;
-  --color-text: #fff;
+*{
+  margin: 0;
+  padding: 0;
 }
 
-.Background {
-  position: fixed;
-  background: radial-gradient(
-    71.43% 62.3% at 46.43% 36.43%,
-    rgba(18, 229, 229, 0) 15%,
-    rgba(239, 155, 255, 0.3) 56.35%,
-    #ff6448 100%
-  );
-  box-shadow: 0px 12.93px 28.74px 0px #ffd28db2 inset;
-  border-radius: 50%;
-  width: 200vw;
-  height: 200vw;
-  top: -60vw;
-  left: -14.27vw;
-  transform: rotate(15.25deg);
+:root {
+  background-color: #fff;
+  --color-text: #000;
 }
+
 
 .App {
   position: relative;
+  width: 100vw;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -33,87 +23,56 @@ text {
   color: var(--color-text);
 }
 
-.Banner {
-  flex: 5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 100;
-}
-
-.Logo {
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 8px;
-}
-
-.Logo--react {
-  width: 100px;
+.Header{
+  background-color: #b6b6b6;
+  width: 100vw;
   height: 100px;
-  animation: Logo--spin infinite 20s linear;
 }
 
-.Logo--lynx {
-  width: 100px;
-  height: 100px;
-  animation: Logo--shake infinite 0.5s ease;
+.Input{
+  padding: 24px 10px;
+  width: 100vw;
 }
 
-@keyframes Logo--spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.calculator-input{
+  background-color: rgb(255, 255, 151);
+  padding: 10px;
+  /* font-size: 4rem; */
+  border: 1px solid black;
+  text-align: right;
 }
 
-@keyframes Logo--shake {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.9);
-  }
-  100% {
-    transform: scale(1);
-  }
+.Output{
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: right;
+  padding: 0px 10px;
 }
 
-.Content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.Output text{
+  font-size: 2rem;
+  text-align: right;
+  background-color: rgb(252, 252, 174);
+  padding: 10px;
+  color: gray;
 }
 
-.Arrow {
-  width: 24px;
-  height: 24px;
+.button-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 8px;
 }
 
-.Title {
-  font-size: 36px;
-  font-weight: 700;
+.button{
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 30px;
+}
+.button:active{
+  background-color: gray;
 }
 
-.Subtitle {
-  font-style: italic;
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.Description {
-  font-size: 20px;
-  color: rgba(255, 255, 255, 0.85);
-  margin: 15rpx;
-}
-
-.Hint {
-  font-size: 12px;
-  margin: 5px;
-  color: rgba(255, 255, 255, 0.65);
+.button text{
+  font-size: 2rem;
+  text-align: center;
 }
